@@ -37,15 +37,6 @@ app.get('/api/songs', (req, res) => {
     .catch(error => console.error(error));
 });
 
-app.post('/api/songs', (req, res) => {
-  const { title, artist, startingNotes } = req.body;
-  const song = new Song({ title, artist, startingNotes });
-
-  song.save()
-    .then(savedSong => res.json(savedSong))
-    .catch(error => console.error(error));
-});
-
 // Start server
 app.listen(5000, () => {
   console.log('Server listening on port 5000');

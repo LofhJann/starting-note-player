@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import AddSongForm from './components/AddSongForm';
 import SongList from './components/songList.js';
 
 function App() {
@@ -22,7 +21,6 @@ function App() {
   return (
     <div>
       <h1>Choir App</h1>
-	<AddSongForm />
 	<SongList />
     </div>
   );
